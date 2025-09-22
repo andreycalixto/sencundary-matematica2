@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Profissional</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Profissional</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#materiais">Materiais</a></li>
+                <li><a href="#forum">Fórum</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h2>Bem-vindo ao nosso espaço profissional</h2>
+                <p>Um lugar para aprender, compartilhar e crescer juntos</p>
+                <button class="cta-button">Saiba Mais</button>
+            </div>
+        </section>
+
+        <section id="materiais" class="materiais">
+            <h2>Materiais de Apoio</h2>
+            <div class="materiais-grid">
+                <div class="material-card">
+                    <h3>Documentação</h3>
+                    <p>Recursos técnicos e manuais para consulta</p>
+                    <button>Acessar</button>
+                </div>
+                <div class="material-card">
+                    <h3>Tutoriais</h3>
+                    <p>Guias passo a passo para diversos tópicos</p>
+                    <button>Acessar</button>
+                </div>
+                <div class="material-card">
+                    <h3>Vídeos</h3>
+                    <p>Conteúdo em vídeo para aprendizado visual</p>
+                    <button>Acessar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="forum" class="forum">
+            <h2>Fórum de Ajuda</h2>
+            <div class="forum-container">
+                <div class="nova-opiniao">
+                    <h3>Compartilhe sua opinião</h3>
+                    <form id="opiniao-form">
+                        <input type="text" id="titulo" placeholder="Título da sua pergunta/opinião" required>
+                        <textarea id="conteudo" placeholder="Descreva sua dúvida ou opinião..." required></textarea>
+                        <button type="submit">Publicar</button>
+                    </form>
+                </div>
+                <div class="opinioes-list">
+                    <h3>Últimas discussões</h3>
+                    <div id="opinioes-container">
+                        <!-- As opiniões serão carregadas aqui via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato">
+        <div class="footer-content">
+            <p>&copy; 2023 Site Profissional. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
