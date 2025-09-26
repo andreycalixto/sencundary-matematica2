@@ -3,90 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Profissional</title>
+    <title>Contabilidade Express - Soluções Financeiras Inteligentes</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
             <div class="logo">
-                <h1>Profissional</h1>
+                <h2>ContabilidadeExpress</h2>
             </div>
             <ul class="nav-links">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#materiais">Materiais</a></li>
-                <li><a href="#forum">Fórum</a></li>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#ferramentas">Ferramentas</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#contato">Contato</a></li>
+                <li><a href="area-cliente.html" class="btn-login">Área do Cliente</a></li>
             </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section id="inicio" class="hero">
-            <div class="hero-content">
-                <h2>Bem-vindo ao nosso espaço profissional</h2>
-                <p>Um lugar para aprender, compartilhar e crescer juntos</p>
-                <button class="cta-button">Saiba Mais</button>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Contabilidade que <span class="highlight">descomplica</span> seu negócio</h1>
+            <p>Soluções completas em contabilidade para empresas e profissionais liberais. Tecnologia e expertise para seu crescimento.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="openCalculator('simulador-tributario')">Simule Agora</button>
+                <button class="btn-secondary">Fale com um Especialista</button>
             </div>
-        </section>
+        </div>
+        <div class="hero-image">
+            <div class="floating-card">
+                <h3>Economize até 30% em impostos</h3>
+                <p>Com o regime tributário ideal</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="materiais" class="materiais">
-            <h2>Materiais de Apoio</h2>
+    <!-- Serviços -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <h2 class="section-title">Nossos Serviços</h2>
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <div class="servico-icon">📊</div>
+                    <h3>Contabilidade Empresarial</h3>
+                    <p>Abertura de empresa, escrituração fiscal, departamento pessoal e muito mais.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">👤</div>
+                    <h3>Pessoa Física</h3>
+                    <p>Imposto de Renda, declarações no exterior e consultoria para autônomos.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">💼</div>
+                    <h3>Consultoria</h3>
+                    <p>Planejamento tributário, due diligence e assessoria financeira.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculadoras -->
+    <section id="ferramentas" class="ferramentas">
+        <div class="container">
+            <h2 class="section-title">Ferramentas Úteis</h2>
+            <div class="calculadoras-grid">
+                <div class="calculadora-card" onclick="openCalculator('pro-labore')">
+                    <h3>Calculadora de Pró-Labore</h3>
+                    <p>Calcule o valor ideal para seu pró-labore</p>
+                </div>
+                <div class="calculadora-card" onclick="openCalculator('simulador-tributario')">
+                    <h3>Simulador Tributário</h3>
+                    <p>Descubra o melhor regime para sua empresa</p>
+                </div>
+                <div class="calculadora-card" onclick="openCalculator('irpf')">
+                    <h3>Imposto de Renda</h3>
+                    <p>Simule seu IRPF de forma rápida</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materiais para Download -->
+    <section class="materiais">
+        <div class="container">
+            <h2 class="section-title">Materiais Gratuitos</h2>
             <div class="materiais-grid">
                 <div class="material-card">
-                    <h3>Documentação</h3>
-                    <p>Recursos técnicos e manuais para consulta</p>
-                    <button>Acessar</button>
+                    <h3>📋 Checklist Mensal</h3>
+                    <p>Checklist completo para fechamento mensal</p>
+                    <button class="btn-download" onclick="downloadMaterial('checklist')">Baixar</button>
                 </div>
                 <div class="material-card">
-                    <h3>Tutoriais</h3>
-                    <p>Guias passo a passo para diversos tópicos</p>
-                    <button>Acessar</button>
+                    <h3>📊 Planilha Fluxo de Caixa</h3>
+                    <p>Controle suas finanças facilmente</p>
+                    <button class="btn-download" onclick="downloadMaterial('planilha')">Baixar</button>
                 </div>
                 <div class="material-card">
-                    <h3>Vídeos</h3>
-                    <p>Conteúdo em vídeo para aprendizado visual</p>
-                    <button>Acessar</button>
+                    <h3>📚 Guia MEI 2024</h3>
+                    <p>Guia completo para Microempreendedor</p>
+                    <button class="btn-download" onclick="downloadMaterial('guia-mei')">Baixar</button>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="forum" class="forum">
-            <h2>Fórum de Ajuda</h2>
-            <div class="forum-container">
-                <div class="nova-opiniao">
-                    <h3>Compartilhe sua opinião</h3>
-                    <form id="opiniao-form">
-                        <input type="text" id="titulo" placeholder="Título da sua pergunta/opinião" required>
-                        <textarea id="conteudo" placeholder="Descreva sua dúvida ou opinião..." required></textarea>
-                        <button type="submit">Publicar</button>
-                    </form>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ContabilidadeExpress</h3>
+                    <p>Soluções contábeis inteligentes para seu crescimento.</p>
                 </div>
-                <div class="opinioes-list">
-                    <h3>Últimas discussões</h3>
-                    <div id="opinioes-container">
-                        <!-- As opiniões serão carregadas aqui via JavaScript -->
-                    </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>contato@contabilidadeexpress.com.br</p>
+                    <p>(11) 9999-9999</p>
                 </div>
-            </div>
-        </section>
-    </main>
-
-    <footer id="contato">
-        <div class="footer-content">
-            <p>&copy; 2023 Site Profissional. Todos os direitos reservados.</p>
-            <div class="social-links">
-                <a href="#">LinkedIn</a>
-                <a href="#">Twitter</a>
-                <a href="#">Instagram</a>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#contato">Contato</a>
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Modais -->
+    <div id="modal-calculadora" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="calculadora-content"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
