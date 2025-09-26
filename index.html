@@ -15,13 +15,14 @@
                 <h2>ContabilidadeExpress</h2>
             </div>
             <ul class="nav-links">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#ferramentas">Ferramentas</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="area-cliente.html" class="btn-login">Área do Cliente</a></li>
+                <li><a href="#inicio" class="nav-tab active" data-tab="inicio">Início</a></li>
+                <li><a href="#servicos" class="nav-tab" data-tab="servicos">Serviços</a></li>
+                <li><a href="#sobre" class="nav-tab" data-tab="sobre">Sobre</a></li>
+                <li><a href="#ferramentas" class="nav-tab" data-tab="ferramentas">Ferramentas</a></li>
+                <li><a href="#forum" class="nav-tab" data-tab="forum">Fórum</a></li>
+                <li><a href="#blog" class="nav-tab" data-tab="blog">Blog</a></li>
+                <li><a href="#contato" class="nav-tab" data-tab="contato">Contato</a></li>
+                <li><a href="#login" class="btn-login nav-tab" data-tab="login">Área do Cliente</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -31,123 +32,271 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Contabilidade que <span class="highlight">descomplica</span> seu negócio</h1>
-            <p>Soluções completas em contabilidade para empresas e profissionais liberais. Tecnologia e expertise para seu crescimento.</p>
-            <div class="hero-buttons">
-                <button class="btn-primary" onclick="openCalculator('simulador-tributario')">Simule Agora</button>
-                <button class="btn-secondary">Fale com um Especialista</button>
+    <!-- Conteúdo das Abas -->
+    <main class="main-content">
+        <!-- Aba Início -->
+        <section id="inicio" class="tab-content active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Contabilidade que <span class="highlight">descomplica</span> seu negócio</h1>
+                    <p>Soluções completas em contabilidade para empresas e profissionais liberais. Tecnologia e expertise para seu crescimento.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="showTab('ferramentas')">Experimente as Ferramentas</button>
+                        <button class="btn-secondary" onclick="showTab('forum')">Participe do Fórum</button>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="hero-image">
-            <div class="floating-card">
-                <h3>Economize até 30% em impostos</h3>
-                <p>Com o regime tributário ideal</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Serviços -->
-    <section id="servicos" class="servicos">
-        <div class="container">
-            <h2 class="section-title">Nossos Serviços</h2>
-            <div class="servicos-grid">
-                <div class="servico-card">
-                    <div class="servico-icon">📊</div>
-                    <h3>Contabilidade Empresarial</h3>
-                    <p>Abertura de empresa, escrituração fiscal, departamento pessoal e muito mais.</p>
-                </div>
-                <div class="servico-card">
-                    <div class="servico-icon">👤</div>
-                    <h3>Pessoa Física</h3>
-                    <p>Imposto de Renda, declarações no exterior e consultoria para autônomos.</p>
-                </div>
-                <div class="servico-card">
-                    <div class="servico-icon">💼</div>
-                    <h3>Consultoria</h3>
-                    <p>Planejamento tributário, due diligence e assessoria financeira.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Calculadoras -->
-    <section id="ferramentas" class="ferramentas">
-        <div class="container">
-            <h2 class="section-title">Ferramentas Úteis</h2>
-            <div class="calculadoras-grid">
-                <div class="calculadora-card" onclick="openCalculator('pro-labore')">
-                    <h3>Calculadora de Pró-Labore</h3>
-                    <p>Calcule o valor ideal para seu pró-labore</p>
-                </div>
-                <div class="calculadora-card" onclick="openCalculator('simulador-tributario')">
-                    <h3>Simulador Tributário</h3>
-                    <p>Descubra o melhor regime para sua empresa</p>
-                </div>
-                <div class="calculadora-card" onclick="openCalculator('irpf')">
-                    <h3>Imposto de Renda</h3>
-                    <p>Simule seu IRPF de forma rápida</p>
+            <div class="features">
+                <div class="container">
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">🧮</div>
+                            <h3>Calculadoras Inteligentes</h3>
+                            <p>Ferramentas avançadas com assistente IA para cálculos precisos</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">💬</div>
+                            <h3>Fórum Comunitário</h3>
+                            <p>Tire dúvidas e compartilhe experiências com outros profissionais</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">📚</div>
+                            <h3>Materiais Exclusivos</h3>
+                            <p>Planilhas, e-books e guias atualizados constantemente</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Materiais para Download -->
-    <section class="materiais">
-        <div class="container">
-            <h2 class="section-title">Materiais Gratuitos</h2>
-            <div class="materiais-grid">
-                <div class="material-card">
-                    <h3>📋 Checklist Mensal</h3>
-                    <p>Checklist completo para fechamento mensal</p>
-                    <button class="btn-download" onclick="downloadMaterial('checklist')">Baixar</button>
-                </div>
-                <div class="material-card">
-                    <h3>📊 Planilha Fluxo de Caixa</h3>
-                    <p>Controle suas finanças facilmente</p>
-                    <button class="btn-download" onclick="downloadMaterial('planilha')">Baixar</button>
-                </div>
-                <div class="material-card">
-                    <h3>📚 Guia MEI 2024</h3>
-                    <p>Guia completo para Microempreendedor</p>
-                    <button class="btn-download" onclick="downloadMaterial('guia-mei')">Baixar</button>
+        <!-- Aba Serviços -->
+        <section id="servicos" class="tab-content">
+            <div class="container">
+                <h2 class="section-title">Nossos Serviços</h2>
+                <div class="servicos-grid">
+                    <div class="servico-card">
+                        <div class="servico-icon">🏢</div>
+                        <h3>Contabilidade Empresarial</h3>
+                        <ul>
+                            <li>Abertura de empresa</li>
+                            <li>Escrituração fiscal</li>
+                            <li>Departamento pessoal</li>
+                            <li>SPED e obrigações acessórias</li>
+                        </ul>
+                    </div>
+                    <div class="servico-card">
+                        <div class="servico-icon">👤</div>
+                        <h3>Pessoa Física</h3>
+                        <ul>
+                            <li>Imposto de Renda</li>
+                            <li>Declarações no exterior</li>
+                            <li>Consultoria para autônomos</li>
+                            <li>Planejamento patrimonial</li>
+                        </ul>
+                    </div>
+                    <div class="servico-card">
+                        <div class="servico-icon">💼</div>
+                        <h3>Consultoria</h3>
+                        <ul>
+                            <li>Planejamento tributário</li>
+                            <li>Due diligence</li>
+                            <li>Assessoria financeira</li>
+                            <li>Reestruturação empresarial</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>ContabilidadeExpress</h3>
-                    <p>Soluções contábeis inteligentes para seu crescimento.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Contato</h4>
-                    <p>contato@contabilidadeexpress.com.br</p>
-                    <p>(11) 9999-9999</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Links Rápidos</h4>
-                    <a href="#servicos">Serviços</a>
-                    <a href="#blog">Blog</a>
-                    <a href="#contato">Contato</a>
+        <!-- Aba Sobre -->
+        <section id="sobre" class="tab-content">
+            <div class="container">
+                <h2 class="section-title">Sobre Nós</h2>
+                <div class="sobre-content">
+                    <div class="sobre-text">
+                        <h3>Há mais de 15 anos transformando a contabilidade brasileira</h3>
+                        <p>Somos especialistas em unir tecnologia de ponta com expertise contábil para oferecer soluções inovadoras que realmente fazem a diferença no seu negócio.</p>
+                        <div class="stats">
+                            <div class="stat">
+                                <h4>500+</h4>
+                                <p>Clientes Ativos</p>
+                            </div>
+                            <div class="stat">
+                                <h4>15 anos</h4>
+                                <p>de Experiência</p>
+                            </div>
+                            <div class="stat">
+                                <h4>98%</h4>
+                                <p>de Satisfação</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
+        </section>
 
-    <!-- Modais -->
-    <div id="modal-calculadora" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <div id="calculadora-content"></div>
-        </div>
-    </div>
+        <!-- Aba Ferramentas -->
+        <section id="ferramentas" class="tab-content">
+            <div class="container">
+                <h2 class="section-title">Ferramentas de Cálculo</h2>
+                
+                <div class="calculadora-container">
+                    <div class="calculadora-sidebar">
+                        <h3>Calculadoras Disponíveis</h3>
+                        <div class="calc-list">
+                            <button class="calc-btn active" data-calc="juros-compostos">Juros Compostos</button>
+                            <button class="calc-btn" data-calc="pro-labore">Pró-Labore</button>
+                            <button class="calc-btn" data-calc="simulador-tributario">Simulador Tributário</button>
+                            <button class="calc-btn" data-calc="irpf">Imposto de Renda</button>
+                            <button class="calc-btn" data-calc="fluxo-caixa">Fluxo de Caixa</button>
+                            <button class="calc-btn" data-calc="valor-presente">Valor Presente</button>
+                        </div>
+                    </div>
+
+                    <div class="calculadora-main">
+                        <!-- Calculadora de Juros Compostos -->
+                        <div id="juros-compostos" class="calc-content active">
+                            <h3>Calculadora de Juros Compostos</h3>
+                            <div class="calc-grid">
+                                <div class="input-group">
+                                    <label>Valor Inicial (R$)</label>
+                                    <input type="number" id="valor-inicial" value="1000" oninput="calcularJurosCompostos()">
+                                </div>
+                                <div class="input-group">
+                                    <label>Aporte Mensal (R$)</label>
+                                    <input type="number" id="aporte-mensal" value="100" oninput="calcularJurosCompostos()">
+                                </div>
+                                <div class="input-group">
+                                    <label>Taxa de Juros (% ao mês)</label>
+                                    <input type="number" id="taxa-juros" value="0.5" step="0.1" oninput="calcularJurosCompostos()">
+                                </div>
+                                <div class="input-group">
+                                    <label>Tempo (meses)</label>
+                                    <input type="number" id="tempo" value="12" oninput="calcularJurosCompostos()">
+                                </div>
+                            </div>
+
+                            <div class="resultados-grid">
+                                <div class="resultado-card">
+                                    <h4>Valor Investido</h4>
+                                    <p id="valor-investido">R$ 2.200,00</p>
+                                </div>
+                                <div class="resultado-card">
+                                    <h4>Juros Acumulados</h4>
+                                    <p id="juros-acumulados">R$ 95,23</p>
+                                </div>
+                                <div class="resultado-card">
+                                    <h4>Valor Final</h4>
+                                    <p id="valor-final">R$ 2.295,23</p>
+                                </div>
+                                <div class="resultado-card">
+                                    <h4>Rentabilidade</h4>
+                                    <p id="rentabilidade">4.33%</p>
+                                </div>
+                            </div>
+
+                            <div class="assistente-ia">
+                                <h4>🤖 Assistente IA</h4>
+                                <div class="ia-message" id="ia-message">
+                                    Calculando melhores opções para seu investimento...
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Outras calculadoras serão carregadas aqui -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aba Fórum -->
+        <section id="forum" class="tab-content">
+            <div class="container">
+                <h2 class="section-title">Fórum de Discussão</h2>
+                
+                <div class="forum-container">
+                    <div class="forum-sidebar">
+                        <h3>Categorias</h3>
+                        <div class="categorias">
+                            <button class="categoria-btn active" data-categoria="geral">Geral</button>
+                            <button class="categoria-btn" data-categoria="fiscal">Fiscal</button>
+                            <button class="categoria-btn" data-categoria="trabalhista">Trabalhista</button>
+                            <button class="categoria-btn" data-categoria="contabil">Contábil</button>
+                            <button class="categoria-btn" data-categoria="duvidas">Dúvidas</button>
+                        </div>
+                    </div>
+
+                    <div class="forum-main">
+                        <div class="nova-discussao">
+                            <h3>Iniciar Nova Discussão</h3>
+                            <form id="form-discussao">
+                                <input type="text" placeholder="Título da discussão" required>
+                                <textarea placeholder="Descreva sua dúvida ou tópico..." rows="4" required></textarea>
+                                <select>
+                                    <option value="geral">Geral</option>
+                                    <option value="fiscal">Fiscal</option>
+                                    <option value="trabalhista">Trabalhista</option>
+                                </select>
+                                <button type="submit" class="btn-primary">Publicar</button>
+                            </form>
+                        </div>
+
+                        <div class="discussoes-list">
+                            <h3>Discussões Recentes</h3>
+                            <div class="discussao-item">
+                                <h4>Como calcular pró-labore para MEI?</h4>
+                                <p>Discussão sobre cálculo ideal de pró-labore para microempreendedores individuais...</p>
+                                <div class="discussao-meta">
+                                    <span>Por: João Silva</span>
+                                    <span>15 respostas</span>
+                                    <span>2 horas atrás</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aba Login -->
+        <section id="login" class="tab-content">
+            <div class="container">
+                <div class="login-container">
+                    <div class="login-form">
+                        <h2>Criar Conta</h2>
+                        <form id="form-cadastro">
+                            <div class="form-group">
+                                <label>Nome Completo</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Data de Nascimento</label>
+                                <input type="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label>CPF</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Senha</label>
+                                <input type="password" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Confirmar Senha</label>
+                                <input type="password" required>
+                            </div>
+                            <button type="submit" class="btn-primary">Criar Conta</button>
+                        </form>
+
+                        <div class="login-links">
+                            <a href="#login" onclick="showLoginForm()">Já tenho uma conta</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
